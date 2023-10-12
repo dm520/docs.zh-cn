@@ -55,11 +55,12 @@
 | ALL   | 拥有对该函数的上述所有所有权限。 |
 
 ### 数据目录权限 (CATALOG)
-
+GRANT USAGE, CREATE DATABASE, DROP, ALTER ON ALL CATALOGS TO ROLE 'root'
 | 对象                                             | 权限            | 用途                                       |
 | ------------------------------------------------ | --------------- | ------------------------------------------ |
 | CATALOG <br />（内部目录，默认名称为 default_catalog） | USAGE           | 使用 internal catalog。                    |
 |                                                  | CREATE DATABASE | 在 internal catalog 里创建数据库。         |
+|                                                  | ALTER           | 修改 internal catalog 。                  |
 |                                                  | ALL             | 拥有对 internal catalog 的上述所有权限。   |
 | CATALOG （外部目录）                             | USAGE           | 使用 external catalog，查看里面的表。      |
 |                                                  | DROP            | 删除 external catalog。                    |
